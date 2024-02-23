@@ -40,21 +40,44 @@ cmake .. -DWITH_HWLOC=OFF
 make -j$(nproc)
 cd
 cp termux-xmrig/start.sh ~
+rm termux-xmrig/start.sh
 ```
 
-After the build is complete, the XMRig executable will be in the `xmrig/build` directory. To run it, please follow the instructions below:
+After the build is complete, the XMRig executable will be located in the `termux-xmrig/xmrig/build` directory. To run it, please follow the instructions below:
 
-1. Enter `ls` to check if there is an `termux-xmrig` folder.
+1. After the `./build.sh` process completes, you will be returned to the root directory. Enter `ls` to check for the presence of the `termux-xmrig` folder and the `start.sh` script.
 
-2. Enter `cd termux-xmrig/xmrig/build`, then enter `ls` to check for the presence of the `xmrig` file.
+2. Enter `cd termux-xmrig/xmrig/build`, then enter `ls` to check for the `xmrig` file.
 
-If everything is correct, this means your compilation was successful. Next, you can visit [XMRig's Command Line Options](https://xmrig.com/docs/miner/command-line-options) to view the commands.
+If everything is correct, this means your compilation was successful.
+
+Next, you can visit [XMRig's Command Line Options](https://xmrig.com/docs/miner/command-line-options) to view the commands.
 
 Here is an example template:
 ```
 ./xmrig -o hk.zephyr.herominers.com:1123 -u ZEPHs8RuJ66Tf43KBbbtnQNxjm48qN6S83Zko2hNv9uhMPHb3jchK9WRkvppjEtRQy5dr2UNBSggdNc1pNJYNYL1ipwqzYgMZZ5.op -p x -t 3
 ```
 This command indicates that I'm connecting to the herominers pool and mining ZEPH with 3 CPU threads. This command is just a template, modify it according to your needs.
+
+There are two ways to start XMRig, as explained below.
+
+**First method:** Using `start.sh` in the root directory
+
+1. Enter `cd` to return to the root directory. You can first execute `./start.sh` to test if XMRig is functioning properly. During the process, press `H` to monitor the hash rate of each core. To end the test, press `ctrl+c` (on Termux for mobile, the virtual ctrl key is at the bottom left of the screen).
+
+2. Enter `nano start.sh` to edit the mining parameters for XMRig (or use vim, depending on your preference). After editing, press `ctrl+o` to save, followed by `ctrl+x` to exit.
+
+3. After modifications, simply enter `./start.sh` each time you start Termux to run the mining program.
+
+4. Happy mining!
+
+**Second method:**
+
+1. `cd /termux-xmrig/xmrig/build`
+
+2. Enter `./xmrig -o hk.zephyr.herominers.com:1123 -u ZEPHs8RuJ66Tf43KBbbtnQNxjm48qN6S83Zko2hNv9uhMPHb3jchK9WRkvppjEtRQy5dr2UNBSggdNc1pNJYNYL1ipwqzYgMZZ5.op -p x -t 3` with parameters set by yourself to start mining. You must enter this command each time you start.
+
+3. Happy mining!
 
 # termux-xmrig
 在Termux中創建一個XMRig腳本。
@@ -98,6 +121,7 @@ cmake .. -DWITH_HWLOC=OFF
 make -j$(nproc)
 cd
 cp termux-xmrig/start.sh ~
+rm termux-xmrig/start.sh
 ```
 
 建造完成後，XMRig可執行檔將位於 `xmrig/build` 目錄中。要運行它，請按照以下說明操作：
