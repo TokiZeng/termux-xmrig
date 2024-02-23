@@ -9,6 +9,7 @@
 
 apt update && apt upgrade
 pkg install automake clang git vim cmake
+chmod +x start.sh
 git clone https://github.com/xmrig/xmrig
 cd xmrig
 mkdir build && cd build
