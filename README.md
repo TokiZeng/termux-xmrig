@@ -27,21 +27,7 @@ chmod +x build.sh
 During the process, if prompted to download, press Y; for all other prompts, press N.
 
 
-The script can create XMRig in Termux on the Android system. It also supports mining with all CPU algorithms supported by XMRig. The content of the script is as follows:
-
-```
-apt update && apt upgrade
-pkg install automake clang git vim cmake
-chmod +x start.sh
-git clone https://github.com/xmrig/xmrig
-cd xmrig
-mkdir build && cd build
-cmake .. -DWITH_HWLOC=OFF
-make -j$(nproc)
-cd ~
-cp termux-xmrig/start.sh ~
-rm termux-xmrig/start.sh
-```
+The script can create XMRig in Termux on the Android system. It also supports mining with all CPU algorithms supported by XMRig. 
 
 After the build is complete, the XMRig executable will be located in the `termux-xmrig/xmrig/build` directory. To run it, please follow the instructions below:
 
@@ -63,11 +49,11 @@ There are two ways to start XMRig, as explained below.
 
 **First method:** Using `start.sh` in the root directory
 
-1. Enter `cd` to return to the root directory. You can first execute `./start.sh` to test if XMRig is functioning properly. During the process, press `H` to monitor the hash rate of each core. To end the test, press `ctrl+c` (on Termux for mobile, the virtual ctrl key is at the bottom left of the screen).
+1. Enter `cd` to return to the root directory. You can first execute `./start` to test if XMRig is functioning properly. During the process, press `H` to monitor the hash rate of each core. To end the test, press `ctrl+c` (on Termux for mobile, the virtual ctrl key is at the bottom left of the screen).
 
-2. Enter `nano start.sh` to edit the mining parameters for XMRig (or use vim, depending on your preference). After editing, press `ctrl+o` to save, followed by `ctrl+x` to exit.
+2. Enter `nano start` to edit the mining parameters for XMRig (or use vim, depending on your preference). After editing, press `ctrl+o` to save, followed by `ctrl+x` to exit.
 
-3. After modifications, simply enter `./start.sh` each time you start Termux to run the mining program.
+3. After modifications, simply enter `./start` each time you start Termux to run the mining program.
 
 4. Happy mining!
 
@@ -112,25 +98,11 @@ chmod +x build.sh
 在過程中，如果提示需要下載，按Y；對於所有其他提示，按N。
 
 
-此腳本可在Android系統的Termux上創建XMRig。它還支援使用XMRig支援的所有CPU演算法進行挖礦。腳本內容如下：
-
-```
-apt update && apt upgrade
-pkg install automake clang git vim cmake
-chmod +x start.sh
-git clone https://github.com/xmrig/xmrig
-cd xmrig
-mkdir build && cd build
-cmake .. -DWITH_HWLOC=OFF
-make -j$(nproc)
-cd ~
-cp termux-xmrig/start.sh ~
-rm termux-xmrig/start.sh
-```
+此腳本可在Android系統的Termux上創建XMRig。它還支援使用XMRig支援的所有CPU演算法進行挖礦。
 
 建造完成後，XMRig可執行檔將位於 `termux-xmrig/xmrig/build` 目錄中。要運行它，請按照以下說明操作：
 
-1. 在 `./build.sh` 程序完成後，您將返回到根目錄。輸入 `ls` 檢查是否存在 `termux-xmrig` 文件夾和 `start.sh` 腳本。
+1. 在 `./build.sh` 程序完成後，您將返回到根目錄。輸入 `ls` 檢查是否存在 `termux-xmrig` 文件夾和 `start` 。
 
 2. 輸入 `cd termux-xmrig/xmrig/build`，然後輸入 `ls` 檢查是否有 `xmrig` 檔案。
 
@@ -146,13 +118,13 @@ rm termux-xmrig/start.sh
 
 有兩種啟動XMRig的方式，如下所述。
 
-**第一種方法：**在根目錄使用 `start.sh`
+**第一種方法：**在根目錄使用 `start`
 
 1. 輸入 `cd` 回到根目錄。您可以首先執行 `./start.sh` 測試XMRig是否正常運作。在過程中，按 `H` 來監測每個核心的哈希率。要結束測試，按 `ctrl+c`（在移動的Termux上，虛擬ctrl鍵位於螢幕左下方）。
 
-2. 輸入 `nano start.sh` 來編輯XMRig的挖礦參數（或使用vim，取決於您的偏好）。編輯完成後，按 `ctrl+o` 保存，隨後按 `ctrl+x` 退出。
+2. 輸入 `nano start` 來編輯XMRig的挖礦參數（或使用vim，取決於您的偏好）。編輯完成後，按 `ctrl+o` 保存，隨後按 `ctrl+x` 退出。
 
-3. 修改完成後，每次啟動Termux時只需輸入 `./start.sh` 即可運行挖礦程序。
+3. 修改完成後，每次啟動Termux時只需輸入 `./start` 即可運行挖礦程序。
 
 4. 快樂挖礦！
 
