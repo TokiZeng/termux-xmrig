@@ -31,7 +31,7 @@ The script can create XMRig in Termux on the Android system. It also supports mi
 
 After the build is complete, the XMRig executable will be located in the `termux-xmrig/xmrig/build` directory. To run it, please follow the instructions below:
 
-1. After the `./build.sh` process completes, you will be returned to the root directory. Enter `ls` to check for the presence of the `termux-xmrig` folder and the `start.sh` script.
+1. After the script `./build.sh` completes, you will be returned to the root directory. If not returned automatically, please enter `cd`. In the root directory, enter `ls` to check for the existence of the `termux-xmrig` folder and `start`.
 
 2. Enter `cd termux-xmrig/xmrig/build`, then enter `ls` to check for the `xmrig` file.
 
@@ -102,7 +102,7 @@ chmod +x build.sh
 
 建造完成後，XMRig可執行檔將位於 `termux-xmrig/xmrig/build` 目錄中。要運行它，請按照以下說明操作：
 
-1. 在 `./build.sh` 程序完成後，您將返回到根目錄。輸入 `ls` 檢查是否存在 `termux-xmrig` 文件夾和 `start` 。
+1. 程式`./build.sh`完成後，您將返回根目錄。如沒返回請輸入`CD`。在根目錄輸入`ls`檢查是否存在`termux-xmrig`資料夾和`start`。
 
 2. 輸入 `cd termux-xmrig/xmrig/build`，然後輸入 `ls` 檢查是否有 `xmrig` 檔案。
 
