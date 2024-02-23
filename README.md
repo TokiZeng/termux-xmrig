@@ -47,7 +47,7 @@ This command indicates that I'm connecting to the herominers pool and mining ZEP
 
 There are two ways to start XMRig, as explained below.
 
-**First method:** Using `start.sh` in the root directory
+**First method:** Using `start` in the root directory
 
 1. Enter `cd` to return to the root directory. You can first execute `./start` to test if XMRig is functioning properly. During the process, press `H` to monitor the hash rate of each core. To end the test, press `ctrl+c` (on Termux for mobile, the virtual ctrl key is at the bottom left of the screen).
 
