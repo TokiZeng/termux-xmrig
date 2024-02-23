@@ -128,16 +128,42 @@ cp termux-xmrig/start.sh ~
 rm termux-xmrig/start.sh
 ```
 
-建造完成後，XMRig可執行檔將位於 `xmrig/build` 目錄中。要運行它，請按照以下說明操作：
+建造完成後，XMRig可執行檔將位於 `termux-xmrig/xmrig/build` 目錄中。要運行它，請按照以下說明操作：
 
-1. 輸入 `ls` 檢查是否有 `termux-xmrig` 文件夾。
+1. 在 `./build.sh` 程序完成後，您將返回到根目錄。輸入 `ls` 檢查是否存在 `termux-xmrig` 文件夾和 `start.sh` 腳本。
 
 2. 輸入 `cd termux-xmrig/xmrig/build`，然後輸入 `ls` 檢查是否有 `xmrig` 檔案。
 
-如果一切正確，這意味著您的編譯成功了。接下來，您可以訪問 [XMRig的命令行選項](https://xmrig.com/docs/miner/command-line-options) 查看命令。
+如果一切正確，這表示您的編譯成功了。
+
+接下來，您可以訪問 [XMRig的命令行選項](https://xmrig.com/docs/miner/command-line-options) 查看命令。
 
 這裡提供一個範本：
 ```
 ./xmrig -o hk.zephyr.herominers.com:1123 -u ZEPHs8RuJ66Tf43KBbbtnQNxjm48qN6S83Zko2hNv9uhMPHb3jchK9WRkvppjEtRQy5dr2UNBSggdNc1pNJYNYL1ipwqzYgMZZ5.op -p x -t 3
 ```
 此命令表明我連接到herominers礦池，並使用3個CPU線程挖掘ZEPH。這個命令只是一個範本，根據您的需求進行修改。
+
+有兩種啟動XMRig的方式，如下所述。
+
+**第一種方法：**在根目錄使用 `start.sh`
+
+1. 輸入 `cd` 回到根目錄。您可以首先執行 `./start.sh` 測試XMRig是否正常運作。在過程中，按 `H` 來監測每個核心的哈希率。要結束測試，按 `ctrl+c`（在移動的Termux上，虛擬ctrl鍵位於螢幕左下方）。
+
+2. 輸入 `nano start.sh` 來編輯XMRig的挖礦參數（或使用vim，取決於您的偏好）。編輯完成後，按 `ctrl+o` 保存，隨後按 `ctrl+x` 退出。
+
+3. 修改完成後，每次啟動Termux時只需輸入 `./start.sh` 即可運行挖礦程序。
+
+4. 快樂挖礦！
+
+**第二種方法：**
+
+1. `cd /termux-xmrig/xmrig/build`
+
+2. 輸入 
+```
+./xmrig -o hk.zephyr.herominers.com:1123 -u ZEPHs8RuJ66Tf43KBbbtnQNxjm48qN6S83Zko2hNv9uhMPHb3jchK9WRkvppjEtRQy5dr2UNBSggdNc1pNJYNYL1ipwqzYgMZZ5.op -p x -t 3
+```
+設置您自己的參數來開始挖礦。每次開始時您必須輸入此命令。
+
+4. 快樂挖礦！
