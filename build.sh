@@ -17,3 +17,4 @@ cmake .. -DWITH_HWLOC=OFF
 make -j$(nproc)
 cd
 cp termux-xmrig/start.sh ~
+rm termux-xmrig/start.sh
