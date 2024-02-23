@@ -12,11 +12,15 @@ After installing Termux, first run `pkg install git` to install Git upon opening
 ```
 git clone https://github.com/TokiZeng/termux-xmrig
 ```
-4.Enter 
+4.Enter
+```
+cd termux-xmrig
+```
+5.Enter 
 ```
 chmod +x build.sh
 ```
-5.Enter 
+6.Enter 
 ```
 ./build.sh
 ```
@@ -63,11 +67,15 @@ This command indicates that I'm connecting to the herominers pool and mining ZEP
 ```
 git clone https://github.com/TokiZeng/termux-xmrig
 ```
-4.輸入 
+4.輸入
+```
+cd termux-xmrig
+```
+5.輸入 
 ```
 chmod +x build.sh
 ```
-5.輸入 
+6.輸入 
 ```
 ./build.sh
 ```
