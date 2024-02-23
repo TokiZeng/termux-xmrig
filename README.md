@@ -6,6 +6,7 @@ Instructions:
 1.First, go to [GitHub Build Action](https://github.com/termux/termux-app/actions/runs/7378253068) to download the Termux version suitable for your device.
 
 2.Install and launch Termux.
+After installing Termux, first run `pkg install git` to install Git upon opening.
 
 3.Enter
 ```
@@ -56,6 +57,7 @@ This command indicates that I'm connecting to the herominers pool and mining ZEP
 1.首先，前往 [GitHub Build Action](https://github.com/termux/termux-app/actions/runs/7378253068) 下載適合您裝置的Termux版本。
 
 2.安裝並啟動Termux。
+安裝完Termux開啟先執行 `pkg install git` 安裝git
 
 3.輸入
 ```
