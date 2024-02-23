@@ -15,6 +15,6 @@ cd xmrig
 mkdir build && cd build
 cmake .. -DWITH_HWLOC=OFF
 make -j$(nproc)
-cd
+cd ~
 cp termux-xmrig/start.sh ~
 rm termux-xmrig/start.sh
