@@ -42,9 +42,9 @@ cp termux-xmrig/start.sh ~
 
 After the build is complete, the XMRig executable will be in the `xmrig/build` directory. To run it, please follow the instructions below:
 
-1. Enter `ls` to check if there is an `xmrig` folder.
+1. Enter `ls` to check if there is an `termux-xmrig` folder.
 
-2. Enter `cd xmrig/build`, then enter `ls` to check for the presence of the `xmrig` file.
+2. Enter `cd termux-xmrig/xmrig/build`, then enter `ls` to check for the presence of the `xmrig` file.
 
 If everything is correct, this means your compilation was successful. Next, you can visit [XMRig's Command Line Options](https://xmrig.com/docs/miner/command-line-options) to view the commands.
 
@@ -93,13 +93,14 @@ cd xmrig
 mkdir build && cd build
 cmake .. -DWITH_HWLOC=OFF
 make -j$(nproc)
+cp termux-xmrig/start.sh ~
 ```
 
 建造完成後，XMRig可執行檔將位於 `xmrig/build` 目錄中。要運行它，請按照以下說明操作：
 
-1. 輸入 `ls` 檢查是否有 `xmrig` 文件夾。
+1. 輸入 `ls` 檢查是否有 `termux-xmrig` 文件夾。
 
-2. 輸入 `cd xmrig/build`，然後輸入 `ls` 檢查是否有 `xmrig` 檔案。
+2. 輸入 `cd termux-xmrig/xmrig/build`，然後輸入 `ls` 檢查是否有 `xmrig` 檔案。
 
 如果一切正確，這意味著您的編譯成功了。接下來，您可以訪問 [XMRig的命令行選項](https://xmrig.com/docs/miner/command-line-options) 查看命令。
 
