@@ -37,6 +37,7 @@ cd xmrig
 mkdir build && cd build
 cmake .. -DWITH_HWLOC=OFF
 make -j$(nproc)
+cp termux-xmrig/start.sh ~
 ```
 
 After the build is complete, the XMRig executable will be in the `xmrig/build` directory. To run it, please follow the instructions below:
