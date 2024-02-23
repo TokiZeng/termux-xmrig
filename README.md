@@ -47,3 +47,52 @@ Here is an example template:
 ./xmrig -o hk.zephyr.herominers.com:1123 -u ZEPHs8RuJ66Tf43KBbbtnQNxjm48qN6S83Zko2hNv9uhMPHb3jchK9WRkvppjEtRQy5dr2UNBSggdNc1pNJYNYL1ipwqzYgMZZ5.op -p x -t 3
 ```
 This command indicates that I'm connecting to the herominers pool and mining ZEPH with 3 CPU threads. This command is just a template, modify it according to your needs.
+
+在Termux中創建一個XMRig腳本。
+
+使用說明：
+
+1.首先，前往 [GitHub Build Action](https://github.com/termux/termux-app/actions/runs/7378253068) 下載適合您裝置的Termux版本。
+
+2.安裝並啟動Termux。
+
+3.輸入
+```
+git clone https://github.com/TokiZeng/termux-xmrig
+```
+4.輸入 
+```
+chmod +x build.sh
+```
+5.輸入 
+```
+./build.sh
+```
+在過程中，如果提示需要下載，按Y；對於所有其他提示，按N。
+
+
+此腳本可在Android系統的Termux上創建XMRig。它還支援使用XMRig支援的所有CPU演算法進行挖礦。腳本內容如下：
+
+```
+apt update && apt upgrade
+pkg install automake clang git vim cmake
+git clone https://github.com/xmrig/xmrig
+cd xmrig
+mkdir build && cd build
+cmake .. -DWITH_HWLOC=OFF
+make -j$(nproc)
+```
+
+建造完成後，XMRig可執行檔將位於 `xmrig/build` 目錄中。要運行它，請按照以下說明操作：
+
+1. 輸入 `ls` 檢查是否有 `xmrig` 文件夾。
+
+2. 輸入 `cd xmrig/build`，然後輸入 `ls` 檢查是否有 `xmrig` 檔案。
+
+如果一切正確，這意味著您的編譯成功了。接下來，您可以訪問 [XMRig的命令行選項](https://xmrig.com/docs/miner/command-line-options) 查看命令。
+
+這裡提供一個範本：
+```
+./xmrig -o hk.zephyr.herominers.com:1123 -u ZEPHs8RuJ66Tf43KBbbtnQNxjm48qN6S83Zko2hNv9uhMPHb3jchK9WRkvppjEtRQy5dr2UNBSggdNc1pNJYNYL1ipwqzYgMZZ5.op -p x -t 3
+```
+此命令表明我連接到herominers礦池，並使用3個CPU線程挖掘ZEPH。這個命令只是一個範本，根據您的需求進行修改。
