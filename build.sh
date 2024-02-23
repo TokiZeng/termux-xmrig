@@ -18,3 +18,4 @@ make -j$(nproc)
 cd ~
 cp termux-xmrig/start.sh ~
 rm termux-xmrig/start.sh
+cd
