@@ -75,9 +75,13 @@ There are two ways to start XMRig, as explained below.
 
 1. `cd /termux-xmrig/xmrig/build`
 
-2. Enter `./xmrig -o hk.zephyr.herominers.com:1123 -u ZEPHs8RuJ66Tf43KBbbtnQNxjm48qN6S83Zko2hNv9uhMPHb3jchK9WRkvppjEtRQy5dr2UNBSggdNc1pNJYNYL1ipwqzYgMZZ5.op -p x -t 3` with parameters set by yourself to start mining. You must enter this command each time you start.
+2. Enter 
+```
+./xmrig -o hk.zephyr.herominers.com:1123 -u ZEPHs8RuJ66Tf43KBbbtnQNxjm48qN6S83Zko2hNv9uhMPHb3jchK9WRkvppjEtRQy5dr2UNBSggdNc1pNJYNYL1ipwqzYgMZZ5.op -p x -t 3
+```
+with parameters set by yourself to start mining. You must enter this command each time you start.
 
-3. Happy mining!
+4. Happy mining!
 
 # termux-xmrig
 在Termux中創建一個XMRig腳本。
