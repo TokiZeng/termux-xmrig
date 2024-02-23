@@ -32,6 +32,7 @@ The script can create XMRig in Termux on the Android system. It also supports mi
 ```
 apt update && apt upgrade
 pkg install automake clang git vim cmake
+chmod +x start.sh
 git clone https://github.com/xmrig/xmrig
 cd xmrig
 mkdir build && cd build
@@ -88,6 +89,7 @@ chmod +x build.sh
 ```
 apt update && apt upgrade
 pkg install automake clang git vim cmake
+chmod +x start.sh
 git clone https://github.com/xmrig/xmrig
 cd xmrig
 mkdir build && cd build
