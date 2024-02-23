@@ -48,6 +48,7 @@ Here is an example template:
 ```
 This command indicates that I'm connecting to the herominers pool and mining ZEPH with 3 CPU threads. This command is just a template, modify it according to your needs.
 
+# termux-xmrig
 在Termux中創建一個XMRig腳本。
 
 使用說明：
