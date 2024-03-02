@@ -3,7 +3,7 @@ Create an XMRig script in Termux.
 
 Instructions:
 
-1.First, go to [GitHub Build Action](https://github.com/termux/termux-app/actions/runs/7378253068) to download the Termux version suitable for your device.
+1.First, go to [GitHub Build Action](https://github.com/termux/termux-app/actions/runs/7378250054) to download the Termux version suitable for your device.
 
 2.Install and launch Termux.
 After installing Termux, first run `pkg install git` to install Git upon opening.
